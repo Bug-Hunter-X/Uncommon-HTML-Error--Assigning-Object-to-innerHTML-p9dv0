@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Correct approach: Convert object to string before assigning to innerHTML
+    const myObject = { name: "John", age: 30 };
+    const objectString = JSON.stringify(myObject, null, 2); // Use JSON.stringify to convert to a string
+    document.getElementById("myDiv").innerHTML = objectString; 
+  </script>
+</body>
+</html>
